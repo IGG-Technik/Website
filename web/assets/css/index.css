@@ -63,7 +63,25 @@ a:hover {
     color: #e85600ff;
 }
 
+h1 {
+    font-size: xxx-large;
+    text-align: center;
+}
+
+h2 {
+    font-size: xx-large;
+    text-align: center;
+}
+
 /* #endregion  */
+
+/* #region default classes */
+.width_lim {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* #endregion */
 
 /* #region header */
 header {
