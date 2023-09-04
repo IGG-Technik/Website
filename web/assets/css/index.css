@@ -258,4 +258,32 @@ header .header .hamburger.active:after {
 }
 
 /* #endregion */
+
+/* #endregion */
+
+/* #region welcome */
+#welcome {
+    display: flex;
+    height: 40vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(
+        to top right,
+        #FB0200,
+        #FC0217,
+        #FD0223,
+        #FD0229,
+        #FD022C,
+        #FD012E,
+        #FE0134,
+        #FE013A,
+        #FE0145,
+        #FF005C
+    );
+
+    overflow: hidden;
+}
+
 /* #endregion */
