@@ -56,7 +56,10 @@ body {
 }
 
 a {
+    color: #ffbf9a;
     transition: 0.2s ease;
+    text-decoration: none;
+    font-size: large;
 }
 
 a:hover {
@@ -65,12 +68,20 @@ a:hover {
 
 h1 {
     font-size: xxx-large;
+    font-weight: 800;
     text-align: center;
 }
 
 h2 {
     font-size: xx-large;
+    font-weight: 600;
     text-align: center;
+    padding-top: 0.25em;
+}
+
+p {
+    font-size: large;
+    padding: 0 1em 1em;
 }
 
 /* #endregion  */
@@ -137,8 +148,8 @@ header .header nav {
 }
 
 header .header nav a {
-    text-decoration: none;
     font-size: x-large;
+    color: #e6e6e6;
 
     margin: 0 10px;
     transform: translateY(7px);
