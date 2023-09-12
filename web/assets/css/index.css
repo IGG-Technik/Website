@@ -56,14 +56,43 @@ body {
 }
 
 a {
+    color: #ffbf9a;
     transition: 0.2s ease;
+    text-decoration: none;
+    font-size: large;
 }
 
 a:hover {
     color: #e85600ff;
 }
 
+h1 {
+    font-size: xxx-large;
+    font-weight: 800;
+    text-align: center;
+}
+
+h2 {
+    font-size: xx-large;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 0.25em;
+}
+
+p {
+    font-size: large;
+    padding: 0 1em 1em;
+}
+
 /* #endregion  */
+
+/* #region default classes */
+.width_lim {
+    max-width: 1500px;
+    margin: auto;
+}
+
+/* #endregion */
 
 /* #region header */
 header {
@@ -84,7 +113,7 @@ header .header {
     align-items: center;
 
     width: 100%;
-    max-width: 1200px;
+    max-width: 1500px;
     height: 80px;
     padding: 5px 15px;
 }
@@ -119,8 +148,8 @@ header .header nav {
 }
 
 header .header nav a {
-    text-decoration: none;
     font-size: x-large;
+    color: #e6e6e6;
 
     margin: 0 10px;
     transform: translateY(7px);
@@ -239,61 +268,33 @@ header .header .hamburger.active:after {
     text-decoration: none;
 }
 
-/* #endregion */
+/* #endregion *
+
 /* #endregion */
 
-/* #region carousel */
-.carousel {
+/* #region welcome */
+#welcome {
     display: flex;
-    max-height: 60vh;
-}
+    height: 40vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-.carousel img {
-    width: 100%;
-    transition: 0.4s ease-in-out;
-}
+    background: linear-gradient(
+        to top right,
+        #FB0200,
+        #FC0217,
+        #FD0223,
+        #FD0229,
+        #FD022C,
+        #FD012E,
+        #FE0134,
+        #FE013A,
+        #FE0145,
+        #FF005C
+    );
 
-.carousel[current_image="1"] img {
-    transform: translateX(-000%);
-}
-
-.carousel[current_image="2"] img {
-    transform: translateX(-100%);
-}
-
-.carousel[current_image="3"] img {
-    transform: translateX(-200%);
+    overflow: hidden;
 }
 
 /* #endregion */
-
-.btn_r {
-    position: absolute;
-    right: 0;
-    width: 35px;
-    cursor: pointer;
-
-    appearance: none;
-    background: none;
-    outline: none;
-    border: none;
-    z-index: 1;
-}
-
-.btn_r .bar, .btn_r::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 3px;
-    border-radius: 3px;
-    background-color: white;
-    margin: 19.5px 0;
-}
-
-.btn_r .bar {
-    transform: rotate(45deg);
-}
-
-.btn_r::after {
-    transform: rotate(-45deg);
-}
