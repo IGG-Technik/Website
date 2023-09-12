@@ -79,6 +79,12 @@ h2 {
     padding-top: 0.25em;
 }
 
+h3 {
+    font-size: x-large;
+    font-weight: 600;
+    text-align: center;
+}
+
 p {
     font-size: large;
     padding: 0 1em 1em;
@@ -272,6 +278,8 @@ header .header .hamburger.active:after {
 
 /* #endregion */
 
+/* #endregion */
+
 /* #region welcome */
 #welcome {
     display: flex;
@@ -295,6 +303,17 @@ header .header .hamburger.active:after {
     );
 
     overflow: hidden;
+}
+
+/* #endregion */
+
+/* #region calendar */
+#calendar iframe {
+    width: 100%;
+    padding: 1em;
+    border: none;
+    border-radius: 30px;
+    height: 50vh;
 }
 
 /* #endregion */
