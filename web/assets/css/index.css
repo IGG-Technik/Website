@@ -95,12 +95,49 @@ p {
     padding: 0 1em 1em;
 }
 
+input,
+textarea {
+    background-image: linear-gradient(to top right,
+            hsl(0, 100%, 60%),
+            hsl(355, 98%, 60%),
+            hsl(352, 98%, 60%),
+            hsl(351, 98%, 60%),
+            hsl(350, 98%, 60%),
+            hsl(349, 99%, 60%),
+            hsl(348, 99%, 60%),
+            hsl(346, 99%, 60%),
+            hsl(344, 99%, 60%),
+            hsl(338, 100%, 60%));
+    border: none;
+    border-radius: 6px;
+
+    font-size: large;
+    color: #e6e6e6;
+
+    padding: 0.25em;
+}
+
+label {
+    font-size: large;
+
+    padding: 0 0 0.25em;
+}
+
 /* #endregion  */
 
 /* #region default classes */
 .width_lim {
     max-width: 1500px;
     margin: auto;
+}
+
+.not-selectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 /* #endregion */
@@ -345,5 +382,123 @@ header .header .hamburger.active:after {
     width: 100%;
     padding: 1em;
 }
+
+/* #endregion */
+
+/* #region form */
+form {
+    display: grid;
+
+    column-gap: 0.5em;
+    row-gap: 0.5em;
+
+    padding: 0 1em 1em;
+}
+
+@media (min-width: 700px) {
+    form {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #div__other,
+    #div__submit {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+}
+
+form div {
+    display: flex;
+
+    flex-direction: column;
+}
+
+#div__other textarea {
+    height: 500px;
+
+    resize: none;
+}
+
+form input {
+    height: calc(24px + 0.5em);
+}
+
+form input[type=submit] {
+    background: linear-gradient(to top right,
+            #70E000,
+            #7CE407,
+            #87E80D,
+            #8DEA11,
+            #93EC14,
+            #9EF01A,
+            #AAF421,
+            #B0F624,
+            #B5F827,
+            #C1FC2D,
+            #B8FB0E);
+
+    color: #080808;
+}
+
+.php_error {
+    color: red;
+    
+    padding: unset;
+}
+
+.php_error::before {
+    content: "❌";
+}
+
+#form-sent {
+    display: flex;
+
+    flex-direction: column;
+
+    text-align: center;
+    color: green;
+}
+
+#form-sent::after {
+    content: "✅";
+    
+    font-size: xx-large;
+}
+
+/* #region tooltip */
+[tooltip]::before {
+    content: attr(tooltip);
+    position: absolute;
+
+    background-color: hsla(0, 0%, 0%, 0.8);
+    border-radius: 10px;
+    opacity: 0;
+
+    color: #e6e6e6;
+
+    max-width: 200px;
+    padding: 5px;
+    transform: translateX(30px) translateY(-35%);
+
+    pointer-events: none;
+    transition: 1s;
+}
+
+
+[tooltip]:hover::before {
+    opacity: 1;
+}
+
+[tooltip] {
+    border: 2px solid #9B9B9B;
+    border-radius: 10000px;
+
+    font-size: small;
+
+    margin-left: 5px;
+    padding: 1px 0;
+    transform: translateY(-1px);
+}
+/* #endregion */
 
 /* #endregion */
