@@ -53,6 +53,8 @@
     <h2>Anmelden & Reservieren</h2>
   </div>
   <div id="news" class="width_lim">
+    <h2>Aktuelles</h2>
+    <p>Noch haben wir keine Neuigkeiten!</p>
   </div>
   <div id="calendar" class="width_lim">
     <h2>Kalender</h2>
